@@ -1,0 +1,95 @@
+/*!
+ * Start Bootstrap - Busines Frontpage (https://startbootstrap.com/template-overviews/business-frontpage)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+.main_login{
+	margin-bottom: 15px;
+	width: 200px;
+	margin-left: 5px;
+}
+
+.main_login_section{
+	background-color: #D4F4FA; 
+	padding: 30px; 
+	height: 300px;
+	align-content: center;
+}
+
+.main_logon_btn{
+	margin-left: 20px;
+}
+
+.main_logon_btn2{
+	margin-left: 20px;
+}
+
+.main_login_a{
+	margin-left: 23px;
+}
+
+
+.main_user{
+	align-content: center;
+	height: 400px;
+}
+
+.main_span{
+	background-color: #FFFFFF; 
+	padding: 5px; 
+	width: 200px; 
+	display:inline-block;
+}
+
+
+
+/* footer */
+.footer_left{
+	float: left;
+	width: 232.5px;
+	height: 120px;
+}
+
+.footer_center{
+	float: left;
+	width: 232.5px;
+	height: 120px;
+	margin-left: 100px; 
+	margin-right: 40px;
+}
+
+.footer_right{
+	float: left;
+	width: 465px;
+	height: 167.56px;
+}
+
+.name{
+	float: left;
+	width: 50%;
+}
+
+.email{
+	float: left;
+	width: 50%;
+}
+
+#email{
+	width: 100%;
+}
+
+textarea.message{
+	width: 100%
+}
+
+.row3{
+	width: 100%
+}
+
+.footer_bottom{
+	float: center;
+}

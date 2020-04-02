@@ -1,0 +1,481 @@
+/*!
+ * Start Bootstrap - Busines Frontpage (https://startbootstrap.com/template-overviews/business-frontpage)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+.main_left{
+	float: left;
+	width: 300px;	
+	style: resize=none;
+	margin-right: 30px;
+	position: relative;
+}
+
+.main_right{
+	float: left;
+	min-width: 750px;
+	style: resize=none;
+}
+
+.main_login{
+	margin-bottom: 15px;
+	width: 200px;
+	margin-left: 5px;
+}
+
+.main_login_section{
+	background-color: #D4F4FA; 
+	padding: 30px; 
+	height: 300px;
+	align-content: center;
+	style: resize=none;
+}
+
+.main_logon_btn{
+	margin-left: 20px;
+}
+
+.main_logon_btn2{
+	margin-left: 20px;
+}
+
+.main_login_a{
+	margin-left: 23px;
+}
+
+
+.main_user{
+	align-content: center;
+	height: 400px;
+}
+
+.main_span{
+	background-color: #FFFFFF; 
+	padding: 5px; 
+	width: 200px; 
+	display:inline-block;
+}
+
+
+
+/* footer */
+.footer_left{
+	float: left;
+	width: 232.5px;
+	height: 120px;
+}
+
+.footer_center{
+	float: left;
+	width: 232.5px;
+	height: 120px;
+	margin-left: 100px; 
+	margin-right: 40px;
+}
+
+.footer_right{
+	float: left;
+	width: 465px;
+	height: 167.56px;
+}
+
+.name{
+	float: left;
+	width: 50%;
+}
+
+.email{
+	float: left;
+	width: 50%;
+}
+
+#email{
+	width: 100%;
+}
+
+textarea.message{
+	width: 100%
+}
+
+.row3{
+	width: 100%
+}
+
+.footer_bottom{
+	float: center;
+}
+
+
+
+/* 게시판 */
+#board table.boardtable{
+	width: 800px;	
+}
+
+.board table.boardtable{
+	font-size: small;
+	border-collapse: collapse;
+	text-align: center;
+	line-height: 1.5;
+	margin-left: 2%;
+	width: 100px;
+}
+
+/* 첫번째 row */	
+.board table.boardtable thead th{ 
+	    padding: 10px;
+	    font-weight: bold;
+	    vertical-align: top;
+	    color: #369;
+	    border-bottom: 3px solid #036;
+	}
+	
+.board table.boardtable tbody th.num th.hits th.category{
+	    width: 10%;
+	    padding: 10px;
+	    font-weight: bold;
+	    vertical-align: top;
+	    border-bottom: 1px solid #ccc;
+	    background: #d9ecff;
+	}
+	
+.board table.boardtable tbody th.title{
+	    width: 30%;
+	    padding: 10px;
+	    vertical-align: top;
+	    border-bottom: 1px solid #ccc;
+	}
+
+.board table.boardtable tbody th{
+	    padding: 10px;
+	    vertical-align: top;
+	    border-bottom: 1px solid #ccc;
+}
+
+
+/* 문의사항 */
+.QA table{
+	width: 800px;
+	font-size: small;
+	border-collapse: collapse;
+	text-align: center;
+	line-height: 1.5;
+	margin-left: 2%;
+}
+
+/* row */	
+.QA table tr{ 
+	padding: 10px;
+	font-weight: bold;
+	color: #369;
+}
+	
+.QA table td.num, td.hits{
+	width: 10%;
+	border-bottom: 1px solid #eeeeee;
+}
+	
+.QA table td.title{
+	width: 60%;
+	padding: 10px;	
+	background-color: #f3f6f7;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+
+.QA table #hide1, #hide2{
+	width: 800px;
+	padding: 10px;
+	display: none;
+	border-bottom: 1px solid #ccc;
+}
+
+
+/* 마이페이지인증 */
+.confirm table{
+	width: 800px;
+	text-align: center;
+}
+
+
+/* 마이페이지메인 */
+.mypage table{
+	width: 800px;
+	border-collapse: collapse;
+	line-height: 1.5;
+	margin-left: 2%;
+	color: #369;
+	font-weight: bold;
+}
+
+	
+.mypage table td{
+	height: 40px;
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+
+
+
+
+
+
+/* 선미씨 수정 */
+
+
+.signup{
+	width: 400px; 
+	margin-left: 90%;
+}
+
+.search{
+	width: 100%;
+	margin-left: 60%;
+}
+
+.search table td{
+	padding: 15px;
+	text-align: center;
+}
+
+.introduction{
+	background-color: #F7F7F7; 
+	width: 800px; 
+	height: 800px; 
+	border-radius: 80px;
+	margin-left: 25px;
+	margin-bottom: 50px;
+}
+
+.introduction_section{
+	padding: 50px;
+}
+
+.introduction_h2{
+	font-size: xx-large; 
+	text-align: center; 
+	padding-top: 50px;
+}
+
+.rest{
+	text-align: center; 
+	font-size: small;  
+	width: 800px; 
+	height: 80%; 
+}
+
+	section.rest
+	{
+		display: inline-block;
+		margin-top: 10%; 
+		width: 50%; 
+		height: 20%; 
+		margin-left: -1%
+	}
+	
+	section.restrest
+	{
+		width: 50%; 
+		height: 50%; 
+		display: inline-block;
+	}
+
+table.type09{
+	font-size: small;
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+	margin-left: 2%;
+	width: 90%;
+}
+	
+	table.type09 thead th{
+	    padding: 10px;
+	    font-weight: bold;
+	    vertical-align: top;
+	    color: #369;
+	    border-bottom: 3px solid #036;
+	}
+	
+	table.type09 tbody th.num{
+	    width: 10%;
+	    padding: 10px;
+	    font-weight: bold;
+	    vertical-align: top;
+	    border-bottom: 1px solid #ccc;
+	    background: #f3f6f7;
+	}
+	
+	table.type09 tbody th.title{
+	    width: 20%;
+	    padding: 10px;
+	    vertical-align: top;
+	    border-bottom: 1px solid #ccc;
+	}
+	
+	table.type09 tbody th.title img{
+		margin-left: 10px;
+	}
+	
+	table.type09 tbody th{
+	    width: 100px;
+	    padding: 10px;
+	    vertical-align: top;
+	    border-bottom: 1px solid #ccc;
+	}
+	
+	.board_list{
+	width: 800px;
+}
+
+.board_list h1{
+	text-align: center;
+}
+
+.board_list section{
+	margin-left: 50px;
+	margin-bottom: 50px;
+}
+
+.board_list select{
+	margin-left: 10%;
+	height: 30px;
+	vertical-align: middle;
+}
+	
+.board_list input[type=text]{
+	height: 30px;
+	width: 50%;
+	vertical-align: middle;
+}
+
+.board_write{
+	margin-left: 25px;
+	text-align: left;
+	width: 800px;
+}
+	
+.board_write h1{
+	font-size: xx-large;
+}
+	
+.board_write h5{
+	font-size: medium;
+}
+	
+.board_write table{
+	width: 90%;
+}
+	
+.board_write table td{
+	padding: 10px;
+}
+	
+.board_write input[type=text]{
+	width: 100%;
+}
+	
+.board_write #section{
+	width: 90%;
+	height: 10%;
+	background-color: #F7F7F7;
+}
+	
+.board_write #table{
+	margin-left:37%;
+	width: 30%;
+}
+
+.board_view{
+	margin-left: 20px;
+}
+
+.board_view_hr{
+	width: 850px;
+	margin-left: -30px;
+	margin-bottom: 50px;
+}
+
+.board_view_td{
+	border-left-style: inset;
+}
+
+.board_view_date{
+	width: 60%;
+	text-align: right;
+}
+
+.board_view_btn{
+	text-align: right; 
+	width: 91.8%
+}
+
+.board_view_textarea{
+	margin-top: 50px; 
+	white-space:pre-wrap; 
+	margin-left: 50px;
+	resize: none;
+}
+
+.board_view_table{
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.board_view section{
+	background-color: #D4F4FA; 
+	width: 700px; 
+	margin-left: 20px; 
+	padding: 20px;
+}
+
+.board_view_re{
+	width:80px; 
+	text-align: right;
+}
+
+.board_view_text{
+	word-break: break-all;
+}
+
+.board_view_rere{
+	width: 650px; 
+	background-color: white; 
+	margin-left: 5px; 
+	padding: 10px;
+}
+
+.board_view_re_text{
+	background-color: #D4F4FA; 
+	margin-top: 5px;
+	resize: none;
+}
+
+.board_view_ans{
+	background-color: #D4F4FA; 
+	padding: 15px;
+	margin-bottom: 30px;
+}
+
+.board_view_ans_text{
+	resize: none;
+}
+
+.board_view_ans_btn{
+	margin-bottom: 20px;
+}
+
+.myboard{
+	margin-left: 25px;
+}
+
+.myboard h1{
+	text-align: center; 
+	width: 800px; 
+	margin-bottom: 50px;
+}
