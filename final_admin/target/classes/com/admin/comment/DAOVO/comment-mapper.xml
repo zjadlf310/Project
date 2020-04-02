@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.admin.comment.DAOVO.comment-mapper">
+	<select id="commentSerchDatAll" resultType="comment" parameterType="board">
+		SELECT
+		*
+		FROM retable
+		WHERE 	board_num = #{board_number}
+	</select>
+	<delete id="commentDelete" parameterType="comment">
+		DELETE FROM retable
+		WHERE board_re = #{board_re}
+	</delete>
+</mapper>
+

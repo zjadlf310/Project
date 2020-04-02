@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.admin.client.DAOVO.client-mapper">
+
+	<!-- 어드민 로그인 -->
+	<select id="adminLogin" resultType="client">
+		SELECT
+		*
+		FROM clientTable
+		WHERE id='admin'
+	</select>
+	<!-- 회원 정보 하나 확인 -->
+	<select id="clientSerchDataOne" resultType="client"
+		parameterType="String">
+		SELECT
+		*
+		FROM
+		clientTable
+		WHERE
+		id = #{id}
+	</select>
+	<!-- 필요없는기능 -->
+	<select id="clientSerchDatAll" resultType="client">
+		SELECT
+		*
+		FROM clientTable
+	</select>
+	<!-- 회원 숫자 체크 (Keyword,option포함, 없을시 null) -->
+	<select id="clientTotalCount" parameterType="page"
+		resultType="int">
+		SELECT COUNT(*) AS
+		totalCount FROM clientTable
+		<if test="searchOption != null">
+			<if test="searchOption.equals('id'.toString())">
+				where id like '%' || #{keyWord} || '%'
+			</if>
+			<if test="searchOption.equals('idName'.toString())">
+				where id like '%' || #{keyWord} || '%' or name like '%'
+				|| #{keyWord} || '%'
+			</if>
+			<if test="searchOption.equals('idMail'.toString())">
+				where id like '%' || #{keyWord} || '%'or mail like '%' ||
+				#{keyWord} || '%'
+			</if>
+		</if>
+	</select>
+	<!--한 페이지 들어갈 회원 정보 list(Keyword,option포함, 없을시 null) -->
+	<select id="clientOnePageInfo" parameterType="page"
+		resultType="client">
+		SELECT X.name, X.nickname, X.id, X.pw, X.tel, X.mail
+		FROM (
+			SELECT rownum as rnum,
+		    A.name, A.nickname, A.id, A.pw, A.tel, A.mail
+			FROM (
+				SELECT * FROM clientTable
+				<if test="searchOption != null">
+					<if test="searchOption.equals('id'.toString())">
+						where id like '%' || #{keyWord} || '%'
+					</if>
+					<if test="searchOption.equals('idName'.toString())">
+						where id like '%' || #{keyWord} || '%' or name like '%' || #{keyWord} || '%'
+					</if>
+					<if test="searchOption.equals('idMail'.toString())">
+						where id like '%' || #{keyWord} || '%'or mail like '%' || #{keyWord} || '%'
+					</if>
+				</if><![CDATA[
+				ORDER BY id) A
+			WHERE rownum <= #{endContent}) X
+		WHERE X.rnum >= #{startContent}  ]]>
+	</select>
+	<!--회원 정보 삭제 -->
+	<delete id="clientDelete" parameterType="client">
+		DELETE FROM clientTable
+		WHERE id=#{id}
+	</delete>
+	<!--회원 정보 삽입 -->
+	<insert id="clientInsert" parameterType="client">
+		INSERT INTO clientTable
+		VALUES()
+	</insert>
+	<!--회원 정보 수정 -->
+	<update id="clientUpdate" parameterType="client">
+		update clientTable 
+		set pw=#{pw},nickname=#{nickname},tel=#{tel},mail=#{mail}
+		where id=#{id}
+	</update>
+</mapper>

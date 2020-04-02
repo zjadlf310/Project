@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.admin.qna.DAOVO.QNA-mapper">
+
+	<!-- 회원 숫자 체크 (Keyword,option포함, 없을시 null) -->
+	<select id="QNATotalCount" parameterType="page"
+		resultType="int">
+		SELECT COUNT(*) AS
+		totalCount FROM QA
+		<if test="searchOption != null">
+			<if test="searchOption.equals('name '.toString())">
+				where name  like '%' || #{keyWord} || '%'
+			</if>
+			<if test="searchOption.equals('email'.toString())">
+				where email like '%' || #{keyWord} || '%'
+			</if>
+			<if test="searchOption.equals('text'.toString())">
+				where text like '%' || #{keyWord} || '%'
+			</if>
+		</if>
+	</select>
+	
+	<!--한 페이지 들어갈 회원 정보 list(Keyword,option포함, 없을시 null) -->
+	<select id="QNAOnePageInfo" parameterType="page"
+		resultType="QNA">
+		SELECT X.num, X.name, X.email, X.text, X.regidate
+		FROM (
+			SELECT rownum as rnum,
+		    A.num, A.name, A.email, A.text, A.regidate
+			FROM (
+				SELECT * FROM QA
+				<if test="searchOption != null">
+					<if test="searchOption.equals('name'.toString())">
+						where name like '%' || #{keyWord} || '%'
+					</if>
+					<if test="searchOption.equals('email'.toString())">
+						where email like '%' || #{keyWord} || '%'
+					</if>
+					<if test="searchOption.equals('text'.toString())">
+						where text like '%' || #{keyWord} || '%'
+					</if>
+				</if><![CDATA[
+				ORDER BY num) A
+			WHERE rownum <= #{endContent}) X
+		WHERE X.rnum >= #{startContent}  ]]>
+	</select>
+	<!-- 게시글 하나 확인 -->
+	<select id="QNASerchDataOne" resultType="QNA"
+		parameterType="int">
+		SELECT * FROM
+		QA
+		WHERE
+		num = #{num}
+	</select>
+	<!-- 게시글 삽입 -->
+	<delete id="QNADelete" parameterType="QNA">
+		delete from QA
+		where num = #{num}
+	</delete>
+</mapper>
+
